@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { HeroCanvas } from '../canvas/HeroCanvas'
 import { ArrowDown, Download, Mail } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from '../icons/SocialIcons'
+import photo from '../../../photo.png'
 import './Hero.css'
 
 const roles = [
@@ -42,40 +43,53 @@ export default function Hero() {
       </div>
 
       <div className="container hero__content">
-        <div className="hero__badge">
-          <span className="glow-dot" />
-          <span>Available for opportunities</span>
+
+        {/* ── Left: profile photo ── */}
+        <div className="hero__photo-col">
+          <div className="hero__photo-frame">
+            <div className="hero__photo-ring hero__photo-ring--1" />
+            <div className="hero__photo-ring hero__photo-ring--2" />
+            <img src={photo} alt="Harsha Waduthanthri" className="hero__photo" />
+          </div>
         </div>
 
-        <p className="hero__greeting">Hi, I'm</p>
-        <h1 className="hero__name">
-          Harsha<br />
-          <span className="gradient-text">Waduthanthri</span>
-        </h1>
+        {/* ── Right: text content ── */}
+        <div className="hero__text-col">
+          <div className="hero__badge">
+            <span className="glow-dot" />
+            <span>Available for opportunities</span>
+          </div>
 
-        <div className="hero__role">
-          <span className="hero__role-text">{displayed}</span>
-          <span className="hero__cursor">|</span>
-        </div>
+          <p className="hero__greeting">Hi, I'm</p>
+          <h1 className="hero__name">
+            Harsha<br />
+            <span className="gradient-text">Waduthanthri</span>
+          </h1>
 
-        <p className="hero__description">
-          Passionate Data Science graduate (awaiting final results) from SLIIT, with a keen interest in machine learning,
-          data analysis, and data engineering. Eager to apply data-driven solutions to real-world challenges.
-        </p>
+          <div className="hero__role">
+            <span className="hero__role-text">{displayed}</span>
+            <span className="hero__cursor">|</span>
+          </div>
 
-        <div className="hero__cta">
-          <a href="#projects" className="btn-primary" onClick={(e) => { e.preventDefault(); document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }) }}>
-            View My Work <ArrowDown size={16} />
-          </a>
-          <a href="/Harsha_Waduthanthri_CV.pdf" download className="btn-secondary">
-            Download CV <Download size={16} />
-          </a>
-        </div>
+          <p className="hero__description">
+            Passionate Data Science graduate (awaiting final results) from SLIIT, with a keen interest in machine learning,
+            data analysis, and data engineering. Eager to apply data-driven solutions to real-world challenges.
+          </p>
 
-        <div className="hero__socials">
-          <a href="https://github.com/Harshawaduthanthri" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><GithubIcon size={20} /></a>
-          <a href="https://linkedin.com/in/harsha-waduthanthri-356bb9309/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><LinkedinIcon size={20} /></a>
-          <a href="mailto:harshawaduthanthri@gmail.com" aria-label="Email"><Mail size={20} /></a>
+          <div className="hero__cta">
+            <a href="#projects" className="btn-primary" onClick={(e) => { e.preventDefault(); document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }) }}>
+              View My Work <ArrowDown size={16} />
+            </a>
+            <a href="/Harsha_Waduthanthri_CV.pdf" download className="btn-secondary">
+              Download CV <Download size={16} />
+            </a>
+          </div>
+
+          <div className="hero__socials">
+            <a href="https://github.com/Harshawaduthanthri" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><GithubIcon size={20} /></a>
+            <a href="https://linkedin.com/in/harsha-waduthanthri-356bb9309/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><LinkedinIcon size={20} /></a>
+            <a href="mailto:harshawaduthanthri@gmail.com" aria-label="Email"><Mail size={20} /></a>
+          </div>
         </div>
       </div>
 
