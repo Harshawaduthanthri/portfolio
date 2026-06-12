@@ -12,32 +12,38 @@ const timeline = [
     period: 'Sep 2025 — Mar 2026',
     location: 'Remote',
     color: '#00ff88',
-    description: 'Developed microservice-based backends using Spring Boot and PostgreSQL. Integrated AI components into backend workflows, created chat bots for booking systems, and implemented AI-driven graph description generation. Optimized SQL-backed REST APIs for high performance.',
+    description: 'Developed microservice-based backends using Spring Boot and PostgreSQL. Integrated AI components into backend workflows, built chatbots for booking systems, and implemented AI-driven graph description generation. Optimized SQL-backed REST APIs for high performance.',
     tags: ['Spring Boot', 'PostgreSQL', 'Microservices', 'AI Integration', 'Java'],
   },
   {
     type: 'education',
     icon: GraduationCap,
-    title: 'BSc (Hons) in IT - Specialization in Data Science',
+    title: 'BSc (Hons) in IT — Specialization in Data Science',
     org: 'Sri Lanka Institute of Information Technology (SLIIT)',
     period: '2022 — Present',
     location: 'Malabe, Sri Lanka',
     color: '#00d4ff',
-    description: 'Completed all requirements for a Bachelor\'s degree, currently awaiting final results. Focused on Machine Learning, Massive Data Processing, and Data Mining. Completed Higher Diploma in IT in July 2024.',
+    description: 'Completed all academic requirements for a Bachelor\'s degree and currently awaiting final results. Specialized in Machine Learning, Massive Data Processing, and Data Mining. Achieved the Higher Diploma in Information Technology in July 2024.',
     tags: ['Data Science', 'Machine Learning', 'Big Data', 'Statistics'],
   },
   {
     type: 'education',
     icon: GraduationCap,
-    title: 'G.C.E. Advanced Level - Physical Science',
+    title: 'G.C.E. Advanced Level — Physical Science',
     org: "St. Sylvester's College, Kandy",
     period: '2019 — 2021',
     location: 'Kandy, Sri Lanka',
     color: '#7b2ff7',
-    description: 'Combined Mathematics: S | Physics: S | Chemistry: C. Gained fundamental knowledge in physical sciences and mathematics.',
+    description: 'Completed the G.C.E. Advanced Level examination in the Physical Science stream, building a strong foundation in analytical thinking and problem solving.',
+    subjects: [
+      { subject: 'Combined Mathematics', grade: 'S' },
+      { subject: 'Chemistry',            grade: 'C' },
+      { subject: 'Physics',              grade: 'S' },
+    ],
     tags: ['Mathematics', 'Physics', 'Chemistry'],
   },
 ]
+
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }
 
@@ -91,6 +97,16 @@ export default function Experience() {
                     </span>
                   </div>
                   <p className="timeline__desc">{item.description}</p>
+                  {item.subjects && (
+                    <ul className="timeline__subjects">
+                      {item.subjects.map(({ subject, grade }) => (
+                        <li key={subject} className="timeline__subject-row">
+                          <span className="timeline__subject-name">{subject}</span>
+                          <span className="timeline__subject-grade">{grade}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   <div className="timeline__tags">
                     {item.tags.map((tag) => (
                       <span key={tag} className="tag">{tag}</span>
