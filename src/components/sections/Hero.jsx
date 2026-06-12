@@ -59,8 +59,8 @@ export default function Hero() {
         </div>
 
         <p className="hero__description">
-          4th-year Data Science undergraduate at SLIIT, passionate about machine learning, AI, and data-driven solutions. 
-          Experienced in building ML models, BI analytics, and intelligent systems.
+          Passionate Data Science graduate (awaiting final results) from SLIIT, with a keen interest in machine learning,
+          data analysis, and data engineering. Eager to apply data-driven solutions to real-world challenges.
         </p>
 
         <div className="hero__cta">

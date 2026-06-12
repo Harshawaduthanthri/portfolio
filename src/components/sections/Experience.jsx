@@ -23,7 +23,7 @@ const timeline = [
     period: '2022 — Present',
     location: 'Malabe, Sri Lanka',
     color: '#00d4ff',
-    description: 'Currently in the 4th Year, 2nd Semester. Focusing on Machine Learning, Massive Data Processing, and Data Mining. Completed Higher Diploma in IT in July 2024.',
+    description: 'Completed all requirements for a Bachelor\'s degree, currently awaiting final results. Focused on Machine Learning, Massive Data Processing, and Data Mining. Completed Higher Diploma in IT in July 2024.',
     tags: ['Data Science', 'Machine Learning', 'Big Data', 'Statistics'],
   },
   {

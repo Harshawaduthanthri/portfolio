@@ -42,8 +42,8 @@ export default function About() {
           </motion.div>
 
           <motion.p className="about__bio" initial="hidden" animate={inView ? 'visible' : 'hidden'} variants={fadeUp} transition={{ delay: 0.25 }}>
-            I'm <strong style={{ color: 'var(--text-primary)' }}>Harsha Waduthanthri</strong>, a passionate Data Science undergraduate (4th Year, 2nd Semester) at
-            <strong style={{ color: 'var(--accent-cyan)' }}> SLIIT, Malabe</strong>. I have a keen interest in machine learning, AI integration, and data engineering.
+            I'm <strong style={{ color: 'var(--text-primary)' }}>Harsha Waduthanthri</strong>, a passionate, enthusiastic, and dedicated Data Science graduate from{' '}
+            <strong style={{ color: 'var(--accent-cyan)' }}>SLIIT, Malabe</strong>, currently awaiting final results. I have a keen interest in data analysis, machine learning, and data engineering.
           </motion.p>
 
           <motion.p className="about__bio" initial="hidden" animate={inView ? 'visible' : 'hidden'} variants={fadeUp} transition={{ delay: 0.3 }}>
